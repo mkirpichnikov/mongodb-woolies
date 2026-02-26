@@ -544,6 +544,16 @@
   .section-better-together .callout strong { color: #00ED64; }
   .callout strong { font-weight: 800; }
 
+  .subsection-heading {
+    font-size: 15px;
+    font-weight: 800;
+    color: #001E2B;
+    margin: 24px 0 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e8ecef;
+    letter-spacing: -0.2px;
+  }
+
   /* GCP comparison table */
   .compare-table {
     width: 100%;
@@ -1072,6 +1082,41 @@
         </ul>
       </div>
     </div>
+
+    <h3 class="subsection-heading">"But doesn't GCP already have memory and search?"</h3>
+    <p>
+      <strong>Gemini Enterprise</strong> offers built-in conversational context, and <strong>Vertex AI Search</strong> provides document retrieval.
+      These are powerful for simple Q&amp;A and chatbot use cases — but agentic architectures demand fundamentally more.
+    </p>
+
+    <div class="two-col">
+      <div class="col">
+        <h3>Where GCP-Native Falls Short for Agents</h3>
+        <ul>
+          <li><strong>Gemini's memory is session-scoped</strong> — it manages in-context conversation history, but doesn't persist plans, tool call results, or reasoning traces across sessions, agents, or restarts</li>
+          <li><strong>No queryable memory</strong> — you can't run aggregation queries, filtered lookups, or analytics over Gemini's context window. It's a black box, not a data store</li>
+          <li><strong>Vertex AI Search is document-centric</strong> — optimised for ingesting and searching static content (PDFs, web pages), not for storing live operational data that agents read and write in real time</li>
+          <li><strong>No transactional guarantees</strong> — when multiple agents update shared state concurrently, neither Gemini nor Vertex AI Search provides ACID consistency</li>
+          <li><strong>No event-driven triggers</strong> — neither service can notify downstream agents or workflows when data changes; you need to build polling or external orchestration</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>What MongoDB Adds to the Stack</h3>
+        <ul>
+          <li><strong>Durable, queryable agent memory</strong> — persist conversation history, plans, and tool outputs as documents you own, query, and analyse — across sessions, agents, and time</li>
+          <li><strong>Operational + retrieval in one</strong> — agents read and write live business data (orders, inventory, customer records) in the same platform that serves vector and full-text search</li>
+          <li><strong>Hybrid retrieval beyond documents</strong> — Atlas Vector Search + Atlas Search query your own structured operational data, not just ingested static content</li>
+          <li><strong>Multi-agent coordination</strong> — Change Streams and ACID transactions let agents safely share and react to state changes without race conditions or stale reads</li>
+          <li><strong>Data portability</strong> — your agent memory and knowledge base live in a platform you control, not locked inside a single model provider's context window</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>
+      <strong>The takeaway:</strong> Gemini provides the reasoning engine. Vertex AI Search handles static document retrieval.
+      MongoDB provides the <strong>persistent, transactional, queryable data layer</strong> that connects agents to live business data,
+      gives them durable memory, and coordinates multi-agent workflows — the layer neither Gemini nor Vertex AI Search was designed to be.
+    </p>
 
     <div class="callout">
       <strong>Atlas runs natively on GCP</strong> — deployed in Google Cloud regions, peered via Private Link, billed through GCP Marketplace,
