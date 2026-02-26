@@ -1037,46 +1037,46 @@
     <div class="section-banner">
       <div class="s-icon">&#x26A1;</div>
       <div>
-        <h2>MongoDB + Agentic AI — Better Together</h2>
-        <div class="s-sub">How operational data, vector search, and agent memory converge in a single platform</div>
+        <h2>MongoDB + GCP — Better Together for Agentic AI</h2>
+        <div class="s-sub">Combine GCP's AI/ML infrastructure with MongoDB's converged data platform to build production-grade agents</div>
       </div>
       <div class="expand-hint"><span class="chevron">&#x25B6;</span> Explore</div>
     </div>
   </summary>
   <div class="section-body">
     <p>
-      Most agentic AI architectures cobble together <strong>4-5 separate systems</strong> — a vector store for RAG, a relational database for state,
-      a cache for session memory, a message queue for orchestration, and yet another store for tool outputs.
-      Each seam adds latency, sync failures, and operational burden. MongoDB eliminates this fragmentation
-      by serving as the <strong>converged data layer</strong> for the entire agent lifecycle.
+      GCP provides world-class AI/ML infrastructure — <strong>Vertex AI, Gemini models, Cloud Run, Pub/Sub</strong> — but agents need more than inference.
+      They need persistent memory, semantic retrieval, operational state, and event-driven orchestration.
+      MongoDB Atlas on GCP completes the stack, giving agents a <strong>converged data layer</strong> purpose-built for autonomous workflows.
     </p>
 
     <div class="two-col">
       <div class="col">
-        <h3>The Agent Lifecycle on MongoDB</h3>
+        <h3>What GCP Brings</h3>
         <ul>
-          <li><strong>Ingest &amp; embed</strong> — store enterprise knowledge with vector embeddings, metadata, and access controls in one document</li>
-          <li><strong>Retrieve &amp; reason</strong> — Atlas Vector Search + Atlas Search deliver hybrid retrieval (semantic + keyword) in a single query</li>
-          <li><strong>Plan &amp; act</strong> — agents persist plans, tool call results, and intermediate state as documents with ACID guarantees</li>
-          <li><strong>Remember &amp; learn</strong> — durable memory with TTL expiry, queryable conversation history, and evolving schemas for agent outputs</li>
-          <li><strong>Orchestrate</strong> — Change Streams trigger downstream agents or human-in-the-loop workflows the instant data changes</li>
+          <li><strong>Vertex AI &amp; Gemini</strong> — foundation models for reasoning, planning, and tool use</li>
+          <li><strong>Cloud Run &amp; GKE</strong> — scalable compute for agent runtimes and microservices</li>
+          <li><strong>Pub/Sub &amp; Eventarc</strong> — messaging backbone for inter-agent communication</li>
+          <li><strong>IAM &amp; VPC</strong> — enterprise-grade identity, networking, and security controls</li>
+          <li><strong>Embedding APIs</strong> — generate text, image, and multi-modal embeddings at scale</li>
         </ul>
       </div>
       <div class="col">
-        <h3>Why One Platform Wins</h3>
+        <h3>What MongoDB Brings</h3>
         <ul>
-          <li><strong>Zero sync lag</strong> — agents query the same data they write to, with read-after-write consistency</li>
-          <li><strong>Simpler security</strong> — one set of roles, encryption policies, and audit logs across all AI workloads</li>
-          <li><strong>Lower latency</strong> — no network hops between a vector DB, a cache, and an operational store</li>
-          <li><strong>Faster iteration</strong> — change agent schemas and tool output structures without coordinating migrations across multiple systems</li>
-          <li><strong>Production-ready from day one</strong> — Atlas provides the HA, scaling, backups, and monitoring that agentic workloads need in production</li>
+          <li><strong>Atlas Vector Search</strong> — store and query embeddings alongside metadata for RAG, no separate vector DB</li>
+          <li><strong>Agent memory &amp; state</strong> — durable, queryable document store for plans, tool outputs, and conversation history</li>
+          <li><strong>Change Streams</strong> — trigger agent workflows the instant data changes, with resumable cursors</li>
+          <li><strong>Hybrid search</strong> — combine semantic (vector) and keyword (Atlas Search) retrieval in a single query</li>
+          <li><strong>ACID transactions</strong> — consistency guarantees when multiple agents update shared state</li>
         </ul>
       </div>
     </div>
 
     <div class="callout">
-      <strong>The MongoDB MCP Server</strong> is now generally available — giving AI agents direct, structured access to MongoDB collections
-      via Anthropic's Model Context Protocol. Agents can query, insert, and aggregate data without custom integration code.
+      <strong>Atlas runs natively on GCP</strong> — deployed in Google Cloud regions, peered via Private Link, billed through GCP Marketplace,
+      and integrated with Google Cloud's IAM and monitoring. Zero data egress between Atlas and GCP compute.
+      The <strong>MongoDB MCP Server</strong> gives AI agents direct, structured access to collections via the Model Context Protocol.
     </div>
   </div>
 </details>
