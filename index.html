@@ -371,6 +371,208 @@
   }
   .agentic-footer-note strong { color: #00ED64; }
 
+  /* ── Collapsible Sections (shared) ── */
+  .collapsible-section {
+    margin-bottom: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e8ecef;
+  }
+  .collapsible-section > summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+  }
+  .collapsible-section > summary::-webkit-details-marker { display: none; }
+  .collapsible-section > summary:focus { outline: none; }
+
+  .section-banner {
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-banner .s-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+  .section-banner h2 {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: -0.4px;
+    line-height: 1.3;
+  }
+  .section-banner .s-sub {
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin-top: 3px;
+  }
+  .section-banner .expand-hint {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .section-banner .expand-hint .chevron {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    font-size: 14px;
+  }
+  .collapsible-section[open] .expand-hint .chevron {
+    transform: rotate(90deg);
+  }
+
+  .section-body {
+    padding: 0 28px 28px;
+    animation: slideDown 0.2s ease;
+  }
+  .section-body p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #3D4F58;
+    margin-bottom: 16px;
+  }
+  .section-body p strong { color: #001E2B; }
+
+  /* Build vs Buy theme */
+  .section-build-buy {
+    background: linear-gradient(168deg, #fefaf3 0%, #ffffff 100%);
+    border-color: #FFC010;
+  }
+  .section-build-buy .s-icon { background: #FFF4CE; color: #944F01; }
+  .section-build-buy h2 { color: #001E2B; }
+  .section-build-buy .s-sub { color: #5C6C75; }
+  .section-build-buy .expand-hint { color: #944F01; }
+
+  /* GCP comparison theme */
+  .section-gcp {
+    background: linear-gradient(168deg, #f0f7ff 0%, #ffffff 100%);
+    border-color: #0498EC;
+  }
+  .section-gcp .s-icon { background: #E1F7FF; color: #006DB0; }
+  .section-gcp h2 { color: #001E2B; }
+  .section-gcp .s-sub { color: #5C6C75; }
+  .section-gcp .expand-hint { color: #006DB0; }
+
+  /* Better Together theme */
+  .section-better-together {
+    background: linear-gradient(168deg, #f0fdf6 0%, #f0f7ff 50%, #fefaf3 100%);
+    border: 2px solid #00ED64;
+  }
+  .section-better-together .s-icon {
+    background: linear-gradient(135deg, #00ED64, #0498EC);
+    color: #ffffff;
+  }
+  .section-better-together h2 { color: #001E2B; }
+  .section-better-together .s-sub { color: #5C6C75; }
+  .section-better-together .expand-hint { color: #00684A; }
+
+  /* Two-column layout inside sections */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 16px;
+  }
+  .two-col .col h3 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+  }
+  .section-build-buy .col h3 { color: #944F01; }
+  .section-gcp .col h3 { color: #006DB0; }
+  .section-better-together .col h3 { color: #00684A; }
+
+  .two-col .col ul, .section-body > ul {
+    list-style: none;
+    padding: 0;
+  }
+  .two-col .col ul li, .section-body > ul li {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: #3D4F58;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .two-col .col ul li::before, .section-body > ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .section-build-buy ul li::before { background: #FFC010; }
+  .section-gcp ul li::before { background: #0498EC; }
+  .section-better-together ul li::before { background: #00ED64; }
+
+  .section-body .callout {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin-top: 4px;
+  }
+  .section-build-buy .callout {
+    background: #FFF4CE;
+    color: #5C3D00;
+  }
+  .section-gcp .callout {
+    background: #E1F7FF;
+    color: #004A77;
+  }
+  .section-better-together .callout {
+    background: linear-gradient(135deg, #001E2B 0%, #00303f 100%);
+    color: #a4bfc9;
+  }
+  .section-better-together .callout strong { color: #00ED64; }
+  .callout strong { font-weight: 800; }
+
+  /* GCP comparison table */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  .compare-table th {
+    text-align: left;
+    font-weight: 800;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #006DB0;
+    padding: 8px 12px;
+    border-bottom: 2px solid #0498EC;
+  }
+  .compare-table td {
+    padding: 8px 12px;
+    color: #3D4F58;
+    border-bottom: 1px solid #e8ecef;
+    line-height: 1.5;
+    vertical-align: top;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .cap { font-weight: 700; color: #001E2B; white-space: nowrap; }
+  .compare-table .mdb { color: #00684A; font-weight: 600; }
+  .compare-table .gcp-cell { color: #5C6C75; }
+
   /* ── Woolworths Banner ── */
   .case-study {
     background: linear-gradient(135deg, #001E2B 0%, #00303f 100%);
@@ -588,6 +790,44 @@
 
 </div>
 
+<!-- ═══════════════ WOOLWORTHS CASE STUDY ═══════════════ -->
+<div class="case-study">
+  <div class="cs-header">
+    <span class="cs-badge">Case Study</span>
+    <span class="cs-company">Woolworths Group — Powering Australia's Largest Retailer</span>
+  </div>
+
+  <div class="cs-stat">
+    <div class="number">Zero</div>
+    <div class="label">Downtime feature releases — rapidly shipping new capabilities to production</div>
+    <span class="pillar-tag tag-flex">Flexibility</span>
+  </div>
+
+  <div class="cs-stat">
+    <div class="number">4M+</div>
+    <div class="label">Online orders over peak season — scaling to serve 30M customers/week across $8B+ AUD in e-commerce sales</div>
+    <span class="pillar-tag tag-scale">Scalability</span>
+  </div>
+
+  <div class="cs-stat">
+    <div class="number">5 yrs</div>
+    <div class="label">Continuous uptime across critical fulfilment systems — zero unplanned downtime</div>
+    <span class="pillar-tag tag-avail">High Availability</span>
+  </div>
+</div>
+
+<!-- ═══════════════ QUOTE ═══════════════ -->
+<div class="quote">
+  <p>
+    "We selected MongoDB Atlas due to its high performance, predictability, and flexibility.
+    MongoDB was consistently able to adapt to our rapid pace of growth, allowing us to release
+    features faster, without any downtime."
+  </p>
+  <div class="attribution">
+    — Rohan Berry, Technology Director — Fulfilment, Woolworths Group
+  </div>
+</div>
+
 <!-- ═══════════════ AGENTIC AI SECTION ═══════════════ -->
 <details class="agentic-section">
 
@@ -668,43 +908,178 @@
 
 </details>
 
-<!-- ═══════════════ WOOLWORTHS CASE STUDY ═══════════════ -->
-<div class="case-study">
-  <div class="cs-header">
-    <span class="cs-badge">Case Study</span>
-    <span class="cs-company">Woolworths Group — Powering Australia's Largest Retailer</span>
-  </div>
+<!-- ═══════════════ BUILD vs BUY ═══════════════ -->
+<details class="collapsible-section section-build-buy">
+  <summary>
+    <div class="section-banner">
+      <div class="s-icon">&#x2696;</div>
+      <div>
+        <h2>Build on a Platform vs. Buy Packaged Services</h2>
+        <div class="s-sub">Why composable beats COTS for differentiated digital capabilities</div>
+      </div>
+      <div class="expand-hint"><span class="chevron">&#x25B6;</span> Explore</div>
+    </div>
+  </summary>
+  <div class="section-body">
+    <p>
+      Organisations increasingly reach for <strong>Commercial Off-The-Shelf (COTS)</strong> products to deliver common services quickly.
+      For commodity workflows — payroll, ERP, ITSM — that makes sense. But when the service <strong>is</strong> the competitive differentiator
+      (customer experience, fulfilment, real-time personalisation), COTS introduces hidden constraints that compound over time.
+    </p>
 
-  <div class="cs-stat">
-    <div class="number">Zero</div>
-    <div class="label">Downtime feature releases — rapidly shipping new capabilities to production</div>
-    <span class="pillar-tag tag-flex">Flexibility</span>
-  </div>
+    <div class="two-col">
+      <div class="col">
+        <h3>The COTS Trade-Off</h3>
+        <ul>
+          <li><strong>Rigid data models</strong> — vendor schemas force your domain into their structure, not yours</li>
+          <li><strong>Integration tax</strong> — every customisation requires adapters, middleware, or vendor professional services</li>
+          <li><strong>Vendor roadmap dependency</strong> — your innovation pace is capped by their release cycle</li>
+          <li><strong>Data gravity lock-in</strong> — once operational data lives inside a COTS silo, extracting it for analytics, AI, or new products is expensive</li>
+          <li><strong>Scaling on their terms</strong> — pricing and architecture limits are dictated by the vendor, not your growth</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>The MongoDB Alternative</h3>
+        <ul>
+          <li><strong>Own your data model</strong> — the document model maps to your domain, evolves with your application, and never forces a vendor's schema on you</li>
+          <li><strong>Composable services</strong> — build exactly the capabilities you need from a unified data platform, not a locked-in product suite</li>
+          <li><strong>Innovate at your pace</strong> — ship features continuously without waiting for vendor patches or upgrade windows</li>
+          <li><strong>Data stays accessible</strong> — operational data, analytics, vector search, and AI workloads run on the same platform — no silos to break out of</li>
+          <li><strong>Scale on your terms</strong> — Atlas auto-scaling and horizontal sharding grow with demand, not a licence renewal</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="cs-stat">
-    <div class="number">4M+</div>
-    <div class="label">Online orders over peak season — scaling to serve 30M customers/week across $8B+ AUD in e-commerce sales</div>
-    <span class="pillar-tag tag-scale">Scalability</span>
+    <div class="callout">
+      <strong>When to build:</strong> If the capability differentiates your customer experience, drives revenue, or requires rapid iteration —
+      build it on a platform you control. Reserve COTS for truly undifferentiated back-office functions where customisation has no strategic value.
+    </div>
   </div>
+</details>
 
-  <div class="cs-stat">
-    <div class="number">5 yrs</div>
-    <div class="label">Continuous uptime across critical fulfilment systems — zero unplanned downtime</div>
-    <span class="pillar-tag tag-avail">High Availability</span>
-  </div>
-</div>
+<!-- ═══════════════ MONGODB vs GCP NATIVE ═══════════════ -->
+<details class="collapsible-section section-gcp">
+  <summary>
+    <div class="section-banner">
+      <div class="s-icon">&#x2601;</div>
+      <div>
+        <h2>MongoDB Atlas vs. GCP Native Databases</h2>
+        <div class="s-sub">One platform across clouds vs. a constellation of single-purpose services</div>
+      </div>
+      <div class="expand-hint"><span class="chevron">&#x25B6;</span> Explore</div>
+    </div>
+  </summary>
+  <div class="section-body">
+    <p>
+      Google Cloud offers strong native database services — but each solves <strong>one problem</strong>.
+      Operational workloads often span multiple data shapes, query patterns, and scaling requirements,
+      forcing teams to stitch together Firestore, Cloud SQL, Spanner, Bigtable, and AlloyDB — each with its own API, scaling model, and operational overhead.
+      MongoDB Atlas consolidates these into a <strong>single, multi-cloud platform</strong>.
+    </p>
 
-<!-- ═══════════════ QUOTE ═══════════════ -->
-<div class="quote">
-  <p>
-    "We selected MongoDB Atlas due to its high performance, predictability, and flexibility.
-    MongoDB was consistently able to adapt to our rapid pace of growth, allowing us to release
-    features faster, without any downtime."
-  </p>
-  <div class="attribution">
-    — Rohan Berry, Technology Director — Fulfilment, Woolworths Group
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Capability</th>
+          <th>MongoDB Atlas</th>
+          <th>GCP Native</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cap">Data Model</td>
+          <td class="mdb">Flexible document model — JSON-like, schema-optional, polymorphic</td>
+          <td class="gcp-cell">Varies: relational (Cloud SQL, Spanner, AlloyDB), key-value (Bigtable), document (Firestore) — each a separate service</td>
+        </tr>
+        <tr>
+          <td class="cap">Horizontal Scaling</td>
+          <td class="mdb">Native sharding with auto-balancing across any cluster size</td>
+          <td class="gcp-cell">Spanner scales globally; Cloud SQL/AlloyDB scale vertically; Firestore auto-scales but with query limitations</td>
+        </tr>
+        <tr>
+          <td class="cap">Vector Search</td>
+          <td class="mdb">Atlas Vector Search — native, no separate service, hybrid with full-text</td>
+          <td class="gcp-cell">AlloyDB AI + Vertex AI integrations; Firestore has preview vector support; requires orchestration across services</td>
+        </tr>
+        <tr>
+          <td class="cap">Full-Text Search</td>
+          <td class="mdb">Atlas Search — Lucene-based, integrated, no data sync needed</td>
+          <td class="gcp-cell">Requires external integration (e.g. Elasticsearch/OpenSearch) for most GCP databases</td>
+        </tr>
+        <tr>
+          <td class="cap">Multi-Cloud</td>
+          <td class="mdb">Deploy across AWS, Azure, and GCP from one control plane — no refactoring</td>
+          <td class="gcp-cell">GCP-only; multi-cloud requires re-architecture or third-party tooling</td>
+        </tr>
+        <tr>
+          <td class="cap">Developer Experience</td>
+          <td class="mdb">Single query API, single connection string, drivers in 12+ languages</td>
+          <td class="gcp-cell">Different APIs, SDKs, and query languages per service (SQL, GQL, HBase API)</td>
+        </tr>
+        <tr>
+          <td class="cap">Cloud Portability</td>
+          <td class="mdb">Same API and tooling whether Atlas runs on GCP, AWS, or Azure</td>
+          <td class="gcp-cell">Deep GCP coupling; migrating away requires significant re-engineering</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>The operational cost of many databases:</strong> Each additional GCP-native service adds a separate monitoring dashboard, scaling policy,
+      IAM configuration, backup strategy, and on-call rotation. Atlas gives you one platform to manage, one bill to optimise, and one team to upskill.
+    </div>
   </div>
-</div>
+</details>
+
+<!-- ═══════════════ BETTER TOGETHER: MONGODB + AGENTIC ═══════════════ -->
+<details class="collapsible-section section-better-together">
+  <summary>
+    <div class="section-banner">
+      <div class="s-icon">&#x26A1;</div>
+      <div>
+        <h2>MongoDB + Agentic AI — Better Together</h2>
+        <div class="s-sub">How operational data, vector search, and agent memory converge in a single platform</div>
+      </div>
+      <div class="expand-hint"><span class="chevron">&#x25B6;</span> Explore</div>
+    </div>
+  </summary>
+  <div class="section-body">
+    <p>
+      Most agentic AI architectures cobble together <strong>4-5 separate systems</strong> — a vector store for RAG, a relational database for state,
+      a cache for session memory, a message queue for orchestration, and yet another store for tool outputs.
+      Each seam adds latency, sync failures, and operational burden. MongoDB eliminates this fragmentation
+      by serving as the <strong>converged data layer</strong> for the entire agent lifecycle.
+    </p>
+
+    <div class="two-col">
+      <div class="col">
+        <h3>The Agent Lifecycle on MongoDB</h3>
+        <ul>
+          <li><strong>Ingest &amp; embed</strong> — store enterprise knowledge with vector embeddings, metadata, and access controls in one document</li>
+          <li><strong>Retrieve &amp; reason</strong> — Atlas Vector Search + Atlas Search deliver hybrid retrieval (semantic + keyword) in a single query</li>
+          <li><strong>Plan &amp; act</strong> — agents persist plans, tool call results, and intermediate state as documents with ACID guarantees</li>
+          <li><strong>Remember &amp; learn</strong> — durable memory with TTL expiry, queryable conversation history, and evolving schemas for agent outputs</li>
+          <li><strong>Orchestrate</strong> — Change Streams trigger downstream agents or human-in-the-loop workflows the instant data changes</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Why One Platform Wins</h3>
+        <ul>
+          <li><strong>Zero sync lag</strong> — agents query the same data they write to, with read-after-write consistency</li>
+          <li><strong>Simpler security</strong> — one set of roles, encryption policies, and audit logs across all AI workloads</li>
+          <li><strong>Lower latency</strong> — no network hops between a vector DB, a cache, and an operational store</li>
+          <li><strong>Faster iteration</strong> — change agent schemas and tool output structures without coordinating migrations across multiple systems</li>
+          <li><strong>Production-ready from day one</strong> — Atlas provides the HA, scaling, backups, and monitoring that agentic workloads need in production</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The MongoDB MCP Server</strong> is now generally available — giving AI agents direct, structured access to MongoDB collections
+      via Anthropic's Model Context Protocol. Agents can query, insert, and aggregate data without custom integration code.
+    </div>
+  </div>
+</details>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <div class="footer">
